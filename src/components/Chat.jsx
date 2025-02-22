@@ -97,9 +97,17 @@ const Chat = ({ userName, ws }) => {
         <h2 className="text-lg font-semibold">Online Users</h2>
         <ul>
           {onlineUsers.map((user, index) => (
-            <li key={index} className="text-green-600 font-medium ">
-              {user}
-            </li>
+            // <li key={index} className=" rounded-full antialiased animate-pulse text-green-600 text-lg ">
+            //   {user}
+            // </li>
+
+            <li 
+            key={index} 
+            className="flex items-center gap-5 p-2  rounded-lg shadow-sm hover:bg-gray-200 transition space"
+          >
+            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-green-700 font-medium text-lg">{user}</span>
+          </li>
           ))}
         </ul>
       </div>
